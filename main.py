@@ -31,11 +31,11 @@ def ejercicio2():
         nombre2 = len(str(request.form['nombre2']))
         nombre3 = len(str(request.form['nombre3']))
 
-        if nombre1 > nombre2 and nombre1 > nombre3:
+        if nombre1 >= nombre2 and nombre1 >= nombre3:
             return render_template('ejercicio2.html', nombre=str(request.form['nombre1']), caracteres= nombre1,resultado='resultado')
-        elif nombre2 > nombre1 and nombre2 > nombre3:
+        elif nombre2 >= nombre1 and nombre2 >= nombre3:
             return render_template('ejercicio2.html', nombre=str(request.form['nombre2']),caracteres= nombre2, resultado='resultado')
-        elif nombre3 > nombre1 and nombre2 > nombre2:
+        elif nombre3 >= nombre1 and nombre2 >= nombre2:
             return render_template('ejercicio2.html', nombre=str(request.form['nombre3']),caracteres= nombre3, resultado='resultado')
         else:
             return render_template('ejercicio2.html', nombre="", resultado='resultado')
